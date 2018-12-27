@@ -10,7 +10,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "repository": {
@@ -28,6 +29,8 @@
     "react-dom": "16.7.0-alpha.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "7.2.1",
+    "@commitlint/config-conventional": "7.1.2",
     "@types/html-webpack-plugin": "3.2.0",
     "@types/react": "16.7.18",
     "@types/react-dom": "16.0.11",
