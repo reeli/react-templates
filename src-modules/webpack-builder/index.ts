@@ -1,4 +1,4 @@
-import { Configuration, Entry, EntryFunc, Module, Output, Plugin, Resolve, RuleSetRule } from "webpack";
+import { Configuration, Entry, EntryFunc, Module, Options, Output, Plugin, Resolve, RuleSetRule } from "webpack";
 
 export class WebpackBuilder {
   private webpackConfig: Configuration = {};
@@ -47,7 +47,8 @@ export class WebpackBuilder {
     return this;
   }
 
-  optimization() {
+  optimization(opt: Options.Optimization) {
+    this.webpackConfig.optimization = opt;
     return this;
   }
 
